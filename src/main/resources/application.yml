@@ -1,0 +1,25 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: account-service
+          uri: http://localhost:9081
+          predicates:
+            - Path=/account/**
+          filters:
+            - RewritePath=/account/(?<segment>.*), /$\{segment}
+#            - name: Hystrix
+#              args:
+#                name: fetchIngredients
+#                fallbackUri: forward:/hystrixfallback
+
+logging:
+  level:
+    org.springframework.cloud.gateway: trace
+    org.springframework.security: debug
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
