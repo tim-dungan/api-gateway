@@ -5,7 +5,7 @@
 
 	<groupId>com.nrs.portal</groupId>
 	<artifactId>api-gateway</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>2019.01.29</version>
 	<packaging>jar</packaging>
 
 	<name>API Gateay</name>
@@ -86,6 +86,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		<finalName>api-gateway</finalName>
 	</build>
 
 	<repositories>
