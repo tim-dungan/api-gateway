@@ -10,10 +10,18 @@ spring:
             - Path=/old-account/**
           filters:
             - RewritePath=/old-account/(?<segment>.*), /$\{segment}
-#            - name: Hystrix
-#              args:
-#                name: fetchIngredients
-#                fallbackUri: forward:/hystrixfallback
+        - id: ltrack-service
+          uri: http://localhost:9082
+          predicates:
+            - Path=/ltrack/**
+          filters:
+            - RewritePath=/ltrack/(?<segment>.*), /$\{segment}
+        - id: carrier-service
+          uri: http://localhost:8084
+          predicates:
+            - Path=/carrier/**
+          filters:
+            - RewritePath=/carrier/(?<segment>.*), /$\{segment}
         - id: account-rest-service
           uri: http://localhost:8082
           predicates:
