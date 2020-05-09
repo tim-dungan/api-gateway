@@ -3,13 +3,13 @@
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.example</groupId>
-	<artifactId>spring-cloud-gateway-sample</artifactId>
+	<groupId>com.nrs.portal</groupId>
+	<artifactId>api-gateway</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>spring-cloud-gateway-sample</name>
-	<description>Demo project for Spring Cloud Gateway</description>
+	<name>api-gateway</name>
+	<description>Spring Cloud Gateway</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -93,6 +93,7 @@
 	</dependencyManagement>
 
 	<build>
+		<finalName>api-gateway</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

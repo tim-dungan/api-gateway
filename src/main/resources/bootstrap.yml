@@ -8,7 +8,7 @@ spring:
       uri: ${SPRING_CONFIG_URI:http://localhost:8888}
       label: master
       fail-fast: false
-      name: actuator,eureka_client,api-gateway
+      name: actuator,eureka_client,admin,api-gateway
 
 info:
   component: ${spring.application.name}
