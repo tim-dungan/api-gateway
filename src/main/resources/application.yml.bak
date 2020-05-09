@@ -42,7 +42,7 @@ spring:
 logging:
   level:
     org.springframework.cloud.gateway: trace
-    org.springframework.security: debug
+    org.springframework: info
 
 management:
   endpoints:
