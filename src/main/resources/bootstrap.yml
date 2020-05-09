@@ -1,0 +1,48 @@
+spring:
+  application:
+    name: api-gateway
+  profiles:
+    active: local
+  cloud:
+    config:
+      uri: ${SPRING_CONFIG_URI:http://localhost:8888}
+      label: master
+      fail-fast: false
+      name: actuator,eureka_client,api-gateway
+
+info:
+  component: ${spring.application.name}
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
+#server:
+#  port: 8081
+#
+#spring:
+#  application:
+#    name: api-gateway
+#  profiles:
+#    active: local
+#  cloud:
+#    config:
+#      uri: ${SPRING_CONFIG_URI:http://localhost:8888}
+#      label: master
+#      fail-fast: false
+#      name: api-gateway, eureka_client, actuator
+#  autoconfigure:
+#    exclude: org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration,org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration
+#
+#info:
+#  component: ${spring.application.name}
+#
+#swagger:
+#  app:
+#    title: ${spring.application.name}
+#    description: Rest Endpoints for ${spring.application.name} service
+#    version: 1.0
