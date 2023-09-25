@@ -45,4 +45,7 @@ management:
 #  app:
 #    title: ${spring.application.name}
 #    description: Rest Endpoints for ${spring.application.name} service
+logging:
+  level:
+    org.springframework.cloud: debug
 #    version: 1.0
